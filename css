@@ -1,1 +1,8 @@
 
+//for wrapping the image in the window
+background-image:url("Images/login image.jpg"); 
+background-repeat: no-repeat;
+background-size: cover;
+
+//fonts syntax
+font-size:x-large/xx-small 
