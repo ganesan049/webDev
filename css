@@ -1,4 +1,3 @@
-
 //for wrapping the image in the window
 background-image:url("Images/login image.jpg"); 
 background-repeat: no-repeat;
@@ -6,3 +5,61 @@ background-size: cover;
 
 //fonts syntax
 font-size:x-large/xx-small 
+
+//transformation - transition
+div{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    transition:all 3s ease-in;
+}
+div:hover{
+    background-color: black;
+    transform: translate(300px,300px) rotate(30deg);
+    width: 300px;
+}
+
+//animation
+div {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation: exampleAnimation 4s linear 2s infinite alternate;
+                /* animation-name animation-duration animation-timing-function:  animation-delay:  animation-iteration-count:  animation-direction: ; */
+}
+/* @keyframes need to call the animation */
+@keyframes exampleAnimation {
+    from {  left:0px;}
+    to {  left:100px;}
+    0% {background-color: red;}
+    25%{background-color: yellow;}
+    50%{background-color: blue;}
+    75%{background-color: green;}
+    100%{background-color: black;}
+}
+--------------------------
+div{
+    width: 100px;
+    height: 30px;
+    background-color: purple;
+    position: relative;
+}
+p{
+    position: absolute;
+    /* top: 30px; */
+    transform: translate(0,-50%);
+    /* background-color: yellow; */
+    color: white;
+    padding: 10px;
+    animation:drag 4s linear 2s infinite alternate;
+}
+@keyframes drag{
+    0%{top:0px;}
+    25%{top:15px;}
+    50%{color: blue;top:30px;}
+    75%{top:15px;}
+    100%{top:0px;}
+}
+
+//media queries
